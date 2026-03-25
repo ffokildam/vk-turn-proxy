@@ -4,6 +4,5 @@ services:
       context: .
       dockerfile: Dockerfile.server
     container_name: vk-turn-server
-    ports:
-      - "56000:56000/udp"
+    network_mode: host
     command: ["/main", "-listen", "0.0.0.0:56000", "-connect", "127.0.0.1:${LOCAL_WG_PORT}"]
