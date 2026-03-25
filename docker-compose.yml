@@ -1,6 +1,7 @@
 services:
   app:
     build:
+      context: .
       dockerfile: Dockerfile.server
     container_name: vk-turn-server
     ports:

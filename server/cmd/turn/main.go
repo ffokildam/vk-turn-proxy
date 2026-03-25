@@ -103,7 +103,7 @@ func (s *UserSession) backendReaderLoop() {
 			log.Printf("Session %s DTLS write error: %v", s.ID, err)
 			conn.Close()
 		}
-    }
+	}
 }
 
 func (s *UserSession) AddConn(id byte, conn net.Conn) {
